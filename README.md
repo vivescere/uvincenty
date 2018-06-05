@@ -1,11 +1,11 @@
 # UVincenty
 
-A fast implementation of the inverse vincenty formula, using a C extension.
+A fast implementation of the inverse vincenty formula, using a C extension. It's roughly 20 times faster than the best alternative I could find.
 
 This code is heavily inspired from the [vincenty package](https://github.com/maurycyp/vincenty).
 
 ## Usage
-```
+```python
 import uvincenty
 boston = (42.3541165, -71.0693514)
 newyork = (40.7791472, -73.9680804)
