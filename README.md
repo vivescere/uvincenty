@@ -19,6 +19,8 @@ pip install uvincenty
 
 ## Benchmarks
 Using ipython:
+
+```python
 >> import vincenty, uvincenty, geopy.distance, geographiclib.geodesic
 >> boston = (42.3541165, -71.0693514)
 >> newyork = (40.7791472, -73.9680804)
@@ -34,3 +36,4 @@ Using ipython:
 
 >> %timeit uvincenty.vincenty(*boston, *newyork)
 885 ns ± 7.74 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+```
