@@ -99,7 +99,13 @@ static PyObject* py_vincenty(PyObject *self, PyObject *args) {
     if (!PyArg_ParseTuple(args, "dddd", &lat1, &lon1, &lat2, &lon2))
         return NULL;
 
-    return PyFloat_FromDouble(vincenty(lat1, lon1, lat2, lon2));
+    double result = vincenty(lat1, lon1, lat2, lon2);
+
+    // Failure to converge
+    if (result == -1)
+        Py_RETURN_NONE;
+
+    return PyFloat_FromDouble(result);
 }
 
 
